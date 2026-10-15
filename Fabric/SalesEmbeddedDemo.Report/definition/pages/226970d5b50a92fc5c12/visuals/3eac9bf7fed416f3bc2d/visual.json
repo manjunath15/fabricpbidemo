@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "3eac9bf7fed416f3bc2d",
   "position": {
     "x": 40,
@@ -18,15 +18,14 @@
               {
                 "textRuns": [
                   {
-                    "value": "Customer Sales Portal",
+                    "value": "Customer Sales Portal - V1",
                     "textStyle": {
+                      "fontWeight": "bold",
                       "fontFamily": "Segoe UI",
-                      "fontSize": "14pt",
-                      "fontWeight": "bold"
+                      "fontSize": "14pt"
                     }
                   }
-                ],
-                "horizontalTextAlignment": "left"
+                ]
               }
             ]
           }

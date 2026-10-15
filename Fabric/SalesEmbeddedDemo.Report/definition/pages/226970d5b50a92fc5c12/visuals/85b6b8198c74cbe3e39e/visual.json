@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "85b6b8198c74cbe3e39e",
   "position": {
     "x": 38.901669445558348,
@@ -25,7 +25,8 @@
                   "Property": "OrderDate"
                 }
               },
-              "queryRef": "orders.OrderDate"
+              "queryRef": "orders.OrderDate",
+              "active": true
             }
           ]
         },
