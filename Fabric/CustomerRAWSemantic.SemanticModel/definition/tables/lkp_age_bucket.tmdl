@@ -1,0 +1,60 @@
+table lkp_age_bucket
+	lineageTag: 7f02f457-4a0c-48b8-855a-279844857fac
+	sourceLineageTag: [dbo].[lkp_age_bucket]
+
+	column abucket
+		dataType: int64
+		formatString: 0
+		lineageTag: 2931eeab-2825-4fff-9fa8-c9116e7de77f
+		sourceLineageTag: abucket
+		summarizeBy: sum
+		sourceColumn: abucket
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_group_key
+		dataType: int64
+		formatString: 0
+		lineageTag: eec09959-5497-4cd9-a516-d83da8fa158b
+		sourceLineageTag: age_group_key
+		summarizeBy: sum
+		sourceColumn: age_group_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_group
+		dataType: string
+		lineageTag: 4d52b47b-0c12-44f5-83d4-f663cba7be34
+		sourceLineageTag: age_group
+		summarizeBy: none
+		sourceColumn: age_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_min
+		dataType: int64
+		formatString: 0
+		lineageTag: 9bb2fbac-22b7-447c-ac6c-56b5707abc80
+		sourceLineageTag: age_min
+		summarizeBy: sum
+		sourceColumn: age_min
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_max
+		dataType: int64
+		formatString: 0
+		lineageTag: b61efbb4-3674-41c2-90cb-169315d96e94
+		sourceLineageTag: age_max
+		summarizeBy: sum
+		sourceColumn: age_max
+
+		annotation SummarizationSetBy = Automatic
+
+	partition lkp_age_bucket = entity
+		mode: directLake
+		source
+			entityName: lkp_age_bucket
+			schemaName: dbo
+			expressionSource: 'DirectLake - CustomerRAW'
+

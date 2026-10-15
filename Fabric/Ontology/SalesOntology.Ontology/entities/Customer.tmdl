@@ -1,0 +1,4 @@
+entity Customer
+	lineageTag: 040ee931-2d70-442d-8347-e5ea43621161
+	backingTable: Customer
+

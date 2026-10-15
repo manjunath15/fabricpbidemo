@@ -1,0 +1,67 @@
+table lkp_country_bucket
+	lineageTag: 49113283-033f-4d71-ae7b-9f7aa5c133a2
+	sourceLineageTag: [dbo].[lkp_country_bucket]
+
+	column bucket
+		dataType: int64
+		formatString: 0
+		lineageTag: 256fdcf5-e2bd-4cd3-84d0-2946e86a8541
+		sourceLineageTag: bucket
+		summarizeBy: sum
+		sourceColumn: bucket
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_key
+		dataType: int64
+		formatString: 0
+		lineageTag: ad9b3f00-0faf-4d15-b397-343039ab8423
+		sourceLineageTag: country_key
+		summarizeBy: sum
+		sourceColumn: country_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_code
+		dataType: string
+		lineageTag: 64670ae0-a8fc-4c44-a922-feea074a4427
+		sourceLineageTag: country_code
+		summarizeBy: none
+		sourceColumn: country_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_name
+		dataType: string
+		lineageTag: 5bbecc21-c2e2-4bcc-8a18-d08c5c182dda
+		sourceLineageTag: country_name
+		summarizeBy: none
+		sourceColumn: country_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: 8861f472-9559-48aa-a726-4ef14448f27b
+		sourceLineageTag: region
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column currency_code
+		dataType: string
+		lineageTag: f01afd8a-4afc-4dc6-8f5d-3f2840a5543f
+		sourceLineageTag: currency_code
+		summarizeBy: none
+		sourceColumn: currency_code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition lkp_country_bucket = entity
+		mode: directLake
+		source
+			entityName: lkp_country_bucket
+			schemaName: dbo
+			expressionSource: 'DirectLake - CustomerRAW'
+

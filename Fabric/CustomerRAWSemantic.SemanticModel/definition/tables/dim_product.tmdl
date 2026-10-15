@@ -1,0 +1,108 @@
+table dim_product
+	lineageTag: 8fae854b-5e2c-4aa9-ac74-a5a324814597
+	sourceLineageTag: [dbo].[dim_product]
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c258bb9b-fcda-45dd-b58f-4bb7e41c4c38
+		sourceLineageTag: product_id
+		summarizeBy: sum
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_sku
+		dataType: string
+		lineageTag: e0250cbe-4e96-4ee9-bfdf-76c9a4205cd8
+		sourceLineageTag: product_sku
+		summarizeBy: none
+		sourceColumn: product_sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: 79be4870-2702-4892-8924-e1b9cb4aea25
+		sourceLineageTag: product_name
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: bcad3dfe-7397-4ed0-a9a5-8b66eff14ad4
+		sourceLineageTag: category
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column subcategory
+		dataType: string
+		lineageTag: 12481d0b-0c0f-432f-831c-ef526a946cab
+		sourceLineageTag: subcategory
+		summarizeBy: none
+		sourceColumn: subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column brand
+		dataType: string
+		lineageTag: 890a4399-bba7-4566-8afc-c46012306a59
+		sourceLineageTag: brand
+		summarizeBy: none
+		sourceColumn: brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column list_price
+		dataType: double
+		lineageTag: b584b7f2-2eb8-487c-af3b-797216b2c656
+		sourceLineageTag: list_price
+		summarizeBy: sum
+		sourceColumn: list_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column std_cost
+		dataType: double
+		lineageTag: 2fb4f16a-fcea-4cc4-bddb-9db8454eb52a
+		sourceLineageTag: std_cost
+		summarizeBy: sum
+		sourceColumn: std_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column supplier_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b6acffdd-1e0e-4cee-a4ee-bc15402593f0
+		sourceLineageTag: supplier_id
+		summarizeBy: sum
+		sourceColumn: supplier_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_active
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f0d76ede-e5db-4d88-81b4-18066ba450eb
+		sourceLineageTag: is_active
+		summarizeBy: none
+		sourceColumn: is_active
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_product = entity
+		mode: directLake
+		source
+			entityName: dim_product
+			schemaName: dbo
+			expressionSource: 'DirectLake - CustomerRAW'
+

@@ -1,0 +1,10 @@
+/// Each Customer will place Multiple Orders. 
+entityRelationship Places
+	label: Places
+	lineageTag: 82688c06-cca6-40f7-8fd7-5e00d053da9d
+	fromEntity: Customer
+	toEntity: Order
+
+	backingConfiguration
+		relationship: Customer_Order
+

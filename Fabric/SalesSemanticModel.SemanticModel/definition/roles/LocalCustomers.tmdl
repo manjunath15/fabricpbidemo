@@ -1,0 +1,9 @@
+/// RLS: restrict rows in customers by CustomerID matching EffectiveIdentityUsername/USERNAME()
+role LocalCustomers
+	modelPermission: read
+
+	tablePermission customers = 'customers'[CustomerName] = CUSTOMDATA()
+		metadataPermission: read
+
+	annotation PBI_Id = 518adebfbb1b48fc82437415cebdbc39
+

@@ -1,0 +1,60 @@
+table dim_age_group
+	lineageTag: b89bb414-2b8e-4511-a94f-d17877fe2b9d
+	sourceLineageTag: [dbo].[dim_age_group]
+
+	column age_group_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d3f8270-31d1-44d6-898c-eb2e7eba761a
+		sourceLineageTag: age_group_key
+		summarizeBy: sum
+		sourceColumn: age_group_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_group
+		dataType: string
+		lineageTag: 4bac4de5-cc52-4292-9419-08f64ae8d5b9
+		sourceLineageTag: age_group
+		summarizeBy: none
+		sourceColumn: age_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_min
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e459166-4b1f-43a2-9820-06bf0bff2c9a
+		sourceLineageTag: age_min
+		summarizeBy: sum
+		sourceColumn: age_min
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_max
+		dataType: int64
+		formatString: 0
+		lineageTag: 88d7a65c-1795-4013-a8eb-a653301c25d0
+		sourceLineageTag: age_max
+		summarizeBy: sum
+		sourceColumn: age_max
+
+		annotation SummarizationSetBy = Automatic
+
+	column weight
+		dataType: int64
+		formatString: 0
+		lineageTag: 808529e1-f973-47f2-b0e4-4b1228c34a93
+		sourceLineageTag: weight
+		summarizeBy: sum
+		sourceColumn: weight
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_age_group = entity
+		mode: directLake
+		source
+			entityName: dim_age_group
+			schemaName: dbo
+			expressionSource: 'DirectLake - CustomerRAW'
+

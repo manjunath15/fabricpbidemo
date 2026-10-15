@@ -1,0 +1,41 @@
+table orderitems
+	lineageTag: 7f397cae-ae5c-455d-ae28-86550557553c
+	sourceLineageTag: [dbo].[orderitems]
+
+	column OrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e0e36a0-fa61-4583-9aac-47ba04601a3a
+		sourceLineageTag: OrderID
+		summarizeBy: none
+		sourceColumn: OrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: f60a0772-1bf2-4c63-86f8-ba1aa00f98c2
+		sourceLineageTag: ProductID
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: a6dc409c-7216-41c8-9773-ae99721fc977
+		sourceLineageTag: Quantity
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	partition orderitems = entity
+		mode: directLake
+		source
+			entityName: orderitems
+			schemaName: dbo
+			expressionSource: 'DirectLake - SalesLakehouse'
+

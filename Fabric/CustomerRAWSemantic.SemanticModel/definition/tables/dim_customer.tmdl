@@ -1,0 +1,220 @@
+table dim_customer
+	lineageTag: 321ba222-b9ea-4583-919c-43f14e434f71
+	sourceLineageTag: [dbo].[dim_customer]
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 49e2f84a-0756-45f1-bf6d-ffb16a9dc1a0
+		sourceLineageTag: customer_id
+		summarizeBy: sum
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		lineageTag: 02f964d7-8ec0-4945-942a-ec67e550c2c5
+		sourceLineageTag: first_name
+		summarizeBy: none
+		sourceColumn: first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		lineageTag: 875a9b94-0f46-41f3-b3cb-92e61c4a6ecf
+		sourceLineageTag: last_name
+		summarizeBy: none
+		sourceColumn: last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 9ce3c2d9-a626-4348-a974-a021d3c82db8
+		sourceLineageTag: email
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender
+		dataType: string
+		lineageTag: 5a7cc1b8-2d67-4ec5-b35c-ac608f482bdd
+		sourceLineageTag: gender
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column age
+		dataType: int64
+		formatString: 0
+		lineageTag: 80f70aea-81cc-489c-acd0-54ccc8a33829
+		sourceLineageTag: age
+		summarizeBy: sum
+		sourceColumn: age
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_group_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 70672780-ecc2-4d05-bdf5-4634bfae7232
+		sourceLineageTag: age_group_key
+		summarizeBy: sum
+		sourceColumn: age_group_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_group
+		dataType: string
+		lineageTag: 71789bf2-9095-4853-9695-6a0c23512c69
+		sourceLineageTag: age_group
+		summarizeBy: none
+		sourceColumn: age_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_key
+		dataType: int64
+		formatString: 0
+		lineageTag: da473d96-75c3-4dd7-afe7-3c7e80228cd7
+		sourceLineageTag: country_key
+		summarizeBy: sum
+		sourceColumn: country_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_code
+		dataType: string
+		lineageTag: 574a1537-4af7-49cc-985c-73479ff07afa
+		sourceLineageTag: country_code
+		summarizeBy: none
+		sourceColumn: country_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_name
+		dataType: string
+		lineageTag: 5c8d5d0b-9e10-4f0d-9355-3559e5ccc11f
+		sourceLineageTag: country_name
+		summarizeBy: none
+		sourceColumn: country_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: 52a2ea31-39ec-49b5-beee-0fa72ae4941e
+		sourceLineageTag: region
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column currency_code
+		dataType: string
+		lineageTag: 516b407e-9b17-4d36-8fdf-d6f3c282a75b
+		sourceLineageTag: currency_code
+		summarizeBy: none
+		sourceColumn: currency_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: 2645b70c-7a47-43bb-bfc1-f5a03a965133
+		sourceLineageTag: city
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column postal_code
+		dataType: string
+		lineageTag: eb0260c0-ce02-4c09-905a-ffb9e9ff0313
+		sourceLineageTag: postal_code
+		summarizeBy: none
+		sourceColumn: postal_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column latitude
+		dataType: double
+		lineageTag: 886eceea-755b-4fda-91ad-80d7d826fc61
+		sourceLineageTag: latitude
+		summarizeBy: sum
+		sourceColumn: latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column longitude
+		dataType: double
+		lineageTag: a6106ca1-8418-4b63-aa4d-6a7eeca0de1f
+		sourceLineageTag: longitude
+		summarizeBy: sum
+		sourceColumn: longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column customer_segment
+		dataType: string
+		lineageTag: ccd10444-6f72-47b1-babc-06c3b252dc57
+		sourceLineageTag: customer_segment
+		summarizeBy: none
+		sourceColumn: customer_segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column loyalty_tier
+		dataType: string
+		lineageTag: 11c04926-0da4-4ea1-ba4d-c5972c506e50
+		sourceLineageTag: loyalty_tier
+		summarizeBy: none
+		sourceColumn: loyalty_tier
+
+		annotation SummarizationSetBy = Automatic
+
+	column signup_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b67b9c5d-bf83-4406-80b2-d5031d1e714d
+		sourceLineageTag: signup_date
+		summarizeBy: none
+		sourceColumn: signup_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_churned
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 85a1100c-377a-4833-a2d8-bd2abfd5ba85
+		sourceLineageTag: is_churned
+		summarizeBy: none
+		sourceColumn: is_churned
+
+		annotation SummarizationSetBy = Automatic
+
+	column marketing_opt_in
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8114e412-7e6b-48d9-9448-1eb814456226
+		sourceLineageTag: marketing_opt_in
+		summarizeBy: none
+		sourceColumn: marketing_opt_in
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_customer = entity
+		mode: directLake
+		source
+			entityName: dim_customer
+			schemaName: dbo
+			expressionSource: 'DirectLake - CustomerRAW'
+

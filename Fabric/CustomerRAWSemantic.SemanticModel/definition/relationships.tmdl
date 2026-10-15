@@ -1,0 +1,80 @@
+relationship dim_customer_fact_customer_transactions
+	fromColumn: fact_customer_transactions.customer_id
+	toColumn: dim_customer.customer_id
+
+relationship dim_customer_fact_txn_lc
+	fromColumn: fact_txn_lc.customer_id
+	toColumn: dim_customer.customer_id
+
+relationship dim_customer_fact_web_events
+	fromColumn: fact_web_events.customer_id
+	toColumn: dim_customer.customer_id
+
+relationship dim_product_fact_customer_transactions
+	fromColumn: fact_customer_transactions.product_id
+	toColumn: dim_product.product_id
+
+relationship dim_product_fact_txn_lc
+	fromColumn: fact_txn_lc.product_id
+	toColumn: dim_product.product_id
+
+relationship dim_product_fact_web_events
+	fromColumn: fact_web_events.product_id
+	toColumn: dim_product.product_id
+
+relationship dim_country_fact_customer_transactions
+	fromColumn: fact_customer_transactions.country_key
+	toColumn: dim_country.country_key
+
+relationship dim_country_fact_txn_lc
+	fromColumn: fact_txn_lc.country_key
+	toColumn: dim_country.country_key
+
+relationship dim_country_fact_web_events
+	fromColumn: fact_web_events.country_key
+	toColumn: dim_country.country_key
+
+relationship dim_age_group_fact_customer_transactions
+	fromColumn: fact_customer_transactions.age_group_key
+	toColumn: dim_age_group.age_group_key
+
+relationship dim_age_group_fact_txn_lc
+	fromColumn: fact_txn_lc.age_group_key
+	toColumn: dim_age_group.age_group_key
+
+relationship dim_age_group_fact_web_events
+	fromColumn: fact_web_events.age_group_key
+	toColumn: dim_age_group.age_group_key
+
+relationship dim_date_fact_customer_transactions
+	fromColumn: fact_customer_transactions.transaction_date
+	toColumn: dim_date.full_date
+
+relationship dim_date_fact_txn_lc
+	fromColumn: fact_txn_lc.transaction_date
+	toColumn: dim_date.full_date
+
+relationship dim_date_fact_web_events
+	fromColumn: fact_web_events.event_date
+	toColumn: dim_date.full_date
+
+relationship dim_channel_fact_customer_transactions
+	fromColumn: fact_customer_transactions.channel
+	toColumn: dim_channel.channel_name
+
+relationship dim_channel_fact_txn_lc
+	fromColumn: fact_txn_lc.channel
+	toColumn: dim_channel.channel_name
+
+relationship dim_channel_fact_web_events
+	fromColumn: fact_web_events.channel
+	toColumn: dim_channel.channel_name
+
+relationship lkp_age_bucket_dim_age_group
+	fromColumn: lkp_age_bucket.age_group_key
+	toColumn: dim_age_group.age_group_key
+
+relationship lkp_country_bucket_dim_country
+	fromColumn: lkp_country_bucket.country_key
+	toColumn: dim_country.country_key
+

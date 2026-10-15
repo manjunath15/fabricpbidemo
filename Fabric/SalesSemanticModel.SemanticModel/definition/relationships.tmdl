@@ -1,0 +1,12 @@
+relationship customers_CustomerID_orders_CustomerID
+	fromColumn: orders.CustomerID
+	toColumn: customers.CustomerID
+
+relationship 3df3b5c1-a75e-1cd4-4a89-b08142c33a8b
+	fromColumn: orderitems.OrderID
+	toColumn: orders.OrderID
+
+relationship 40af9675-4209-f87e-c8bb-e36266ff277b
+	fromColumn: orderitems.ProductID
+	toColumn: products.ProductID
+

@@ -1,0 +1,48 @@
+table customers
+	lineageTag: a34b039b-e741-4909-9ba8-42ed9e8b4dd5
+	sourceLineageTag: [dbo].[customers]
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: 325becd5-bfbf-44ea-8848-af9f6584530c
+		sourceLineageTag: CustomerID
+		summarizeBy: count
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerName
+		dataType: string
+		lineageTag: 59a0640c-1896-419b-8d74-c52da8a14c48
+		sourceLineageTag: CustomerName
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 05516964-7e3f-4a05-a823-bae955315bc2
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segment
+		dataType: string
+		lineageTag: 6c3d23d3-ce6c-498b-abc3-25f92980b92d
+		sourceLineageTag: Segment
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition customers = entity
+		mode: directLake
+		source
+			entityName: customers
+			schemaName: dbo
+			expressionSource: 'DirectLake - SalesLakehouse'
+

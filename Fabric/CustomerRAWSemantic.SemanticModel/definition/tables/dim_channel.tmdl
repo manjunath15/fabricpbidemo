@@ -1,0 +1,39 @@
+table dim_channel
+	lineageTag: 8598a0dd-c1b4-4568-98d6-cf85aa5ad0c2
+	sourceLineageTag: [dbo].[dim_channel]
+
+	column channel_key
+		dataType: int64
+		formatString: 0
+		lineageTag: ac7f772a-acaa-4d31-9709-6367a82d6fde
+		sourceLineageTag: channel_key
+		summarizeBy: sum
+		sourceColumn: channel_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column channel_name
+		dataType: string
+		lineageTag: f218506c-f8b5-4a93-bf27-1ebc464448c1
+		sourceLineageTag: channel_name
+		summarizeBy: none
+		sourceColumn: channel_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column channel_type
+		dataType: string
+		lineageTag: d4a5cf78-91f7-4a85-9795-63854276ccb8
+		sourceLineageTag: channel_type
+		summarizeBy: none
+		sourceColumn: channel_type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_channel = entity
+		mode: directLake
+		source
+			entityName: dim_channel
+			schemaName: dbo
+			expressionSource: 'DirectLake - CustomerRAW'
+

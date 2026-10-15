@@ -1,0 +1,41 @@
+table OrderItem
+	lineageTag: a5bb0371-1120-4e0a-b340-81b8601d1f7c
+
+	column OrderID
+		dataType: int64
+		lineageTag: ea4340d7-4a27-49c0-b307-b6f7b5884393
+		sourceColumn: OrderID
+
+	column ProductID
+		dataType: int64
+		lineageTag: af1bf753-59e2-4a07-97fc-1c8a26a4a87f
+		sourceColumn: ProductID
+
+	column Quantity
+		dataType: int64
+		lineageTag: c846f1b6-5bea-47bd-81c0-834e91aa944c
+		sourceColumn: Quantity
+
+	partition OrderItem = entity
+		mode: directLake
+		source
+			entityName: orderitems
+			schemaName: dbo
+			expressionSource: 'DirectLake - SalesLakehouse'
+
+		annotation ONT_WorkspaceId = 00000000-0000-0000-0000-000000000000
+
+		annotation ONT_ItemId = 756b34a8-6ea7-9b6e-4f51-2c8de8f96c27
+
+		annotation ONT_ItemKind = Lakehouse
+
+		annotation ONT_ItemName = SalesLakehouse
+
+		annotation ONT_WorkspaceName = WORKSPACE_NAME_PLACEHOLDER
+
+		annotation ONT_SqlEndpoint = pfivgtygvc4e7pugjctkzogonu-i3qnyx47hhdebanfqkpth3s6aa.datawarehouse.fabric.microsoft.com
+
+		annotation ONT_SqlDatabase = SalesLakehouse
+
+		annotation ONT_PinnedAtUtc = 2026-09-30T05:38:57.772Z
+

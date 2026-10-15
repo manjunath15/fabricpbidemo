@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "GenerateSyntheticCustomer360"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d89333d3-59b4-90bd-4e78-831e90048497"
+  }
+}

@@ -1,0 +1,11 @@
+expression 'DirectLake - CustomerRAW' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/5fdce046-399f-40c6-81a5-829f33ee5e00/252af361-4e97-4bb8-8fb6-71833577f8d1", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: 768c635d-3fce-4cb2-ac9a-b69f0134d052
+
+	annotation PBI_IncludeFutureArtifacts = False
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[agg_customer_360]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[agg_category_month]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[agg_country_month]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[agg_customer_rfm]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[agg_channel_day]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[agg_age_country_month]"}},"objectType":"Table"}]
+

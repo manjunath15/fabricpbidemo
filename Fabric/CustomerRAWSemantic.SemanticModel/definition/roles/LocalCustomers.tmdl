@@ -1,0 +1,9 @@
+/// RLS: restricts each viewer to their own customer row using dim_customer[email].
+role LocalCustomers
+	modelPermission: read
+
+	tablePermission dim_customer = 'dim_customer'[email] = USERPRINCIPALNAME()
+		metadataPermission: read
+
+	annotation PBI_Id = cb8dac73b223456083bd49589ab0859d
+

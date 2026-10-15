@@ -1,0 +1,12 @@
+model Model
+
+ref table Customer
+ref table Product
+ref table Order
+ref table OrderItem
+
+ref entity Customer
+ref entity Order
+
+ref namespace default
+

@@ -1,0 +1,183 @@
+table fact_web_events
+	lineageTag: d3956b00-77ff-4169-b6b6-4be10633e253
+	sourceLineageTag: [dbo].[fact_web_events]
+
+	column event_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f98450a-7c87-4d88-84b9-aeca43b632f8
+		sourceLineageTag: event_id
+		summarizeBy: sum
+		sourceColumn: event_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 701c7c21-bdb7-4640-af58-d8766b3e76ec
+		sourceLineageTag: event_date
+		summarizeBy: none
+		sourceColumn: event_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_code
+		dataType: string
+		lineageTag: 6947cb3b-886d-40f2-9252-c695b107de7d
+		sourceLineageTag: country_code
+		summarizeBy: none
+		sourceColumn: country_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_group
+		dataType: string
+		lineageTag: 0dde310c-e759-482f-b4f2-e1e0ab6cea68
+		sourceLineageTag: age_group
+		summarizeBy: none
+		sourceColumn: age_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_type
+		dataType: string
+		lineageTag: b553fae4-4423-4d47-8d1e-c4c5030a3304
+		sourceLineageTag: event_type
+		summarizeBy: none
+		sourceColumn: event_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 50492eae-bc1d-44ee-9b65-ded5a2200852
+		sourceLineageTag: customer_id
+		summarizeBy: sum
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c975c841-4703-4896-a3fc-25bf88305dab
+		sourceLineageTag: product_id
+		summarizeBy: sum
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column channel
+		dataType: string
+		lineageTag: ccc31387-533f-4903-aa95-6e06fcce5c38
+		sourceLineageTag: channel
+		summarizeBy: none
+		sourceColumn: channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_type
+		dataType: string
+		lineageTag: 266e118b-a73a-43d8-91bf-081e876296aa
+		sourceLineageTag: device_type
+		summarizeBy: none
+		sourceColumn: device_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column referrer
+		dataType: string
+		lineageTag: 3fa8e05a-9581-43d5-958a-b978e8d0a21f
+		sourceLineageTag: referrer
+		summarizeBy: none
+		sourceColumn: referrer
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_dwell_sec
+		dataType: int64
+		formatString: 0
+		lineageTag: 85e547a9-bc95-4438-b307-577833897675
+		sourceLineageTag: page_dwell_sec
+		summarizeBy: sum
+		sourceColumn: page_dwell_sec
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_id
+		dataType: string
+		lineageTag: 29f2f7e5-a7d1-47f1-b914-df06b2178bf5
+		sourceLineageTag: session_id
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_ts
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6dcd2b18-8901-4015-a460-1f0d8f8d7148
+		sourceLineageTag: event_ts
+		summarizeBy: none
+		sourceColumn: event_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: ab4564ea-e480-4ca2-bf06-c00015712788
+		sourceLineageTag: region
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column age_group_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 1740b380-f3e4-4022-b0c9-29b895808449
+		sourceLineageTag: age_group_key
+		summarizeBy: sum
+		sourceColumn: age_group_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_key
+		dataType: int64
+		formatString: 0
+		lineageTag: e4c6cb23-146d-49b6-b8de-88aa896cb49e
+		sourceLineageTag: country_key
+		summarizeBy: sum
+		sourceColumn: country_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_year
+		dataType: int64
+		formatString: 0
+		lineageTag: c7d61451-3115-47db-b829-4c09bb49a247
+		sourceLineageTag: event_year
+		summarizeBy: sum
+		sourceColumn: event_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_month
+		dataType: int64
+		formatString: 0
+		lineageTag: 9eb901af-3736-45bc-8316-0545620a13cf
+		sourceLineageTag: event_month
+		summarizeBy: sum
+		sourceColumn: event_month
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_web_events = entity
+		mode: directLake
+		source
+			entityName: fact_web_events
+			schemaName: dbo
+			expressionSource: 'DirectLake - CustomerRAW'
+

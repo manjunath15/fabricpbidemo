@@ -1,0 +1,46 @@
+table Customer
+	lineageTag: 0f188eb1-6aa2-4e8f-9263-34f4de7dd8e5
+
+	column CustomerID
+		dataType: int64
+		lineageTag: 64c20e9a-072d-4aa5-b656-196e137bbf9b
+		sourceColumn: CustomerID
+
+	column CustomerName
+		dataType: string
+		lineageTag: 20a35eea-399a-4e3b-bff4-45547f5a9a5f
+		sourceColumn: CustomerName
+
+	column City
+		dataType: string
+		lineageTag: c2dbdbc2-c5ed-4c11-b7d2-5c8dc72ea238
+		sourceColumn: City
+
+	column Segment
+		dataType: string
+		lineageTag: ee1741cf-1a9b-4c08-82a7-1fad21aed80a
+		sourceColumn: Segment
+
+	partition Customer = entity
+		mode: directLake
+		source
+			entityName: customers
+			schemaName: dbo
+			expressionSource: 'DirectLake - SalesLakehouse'
+
+		annotation ONT_WorkspaceId = 00000000-0000-0000-0000-000000000000
+
+		annotation ONT_ItemId = 756b34a8-6ea7-9b6e-4f51-2c8de8f96c27
+
+		annotation ONT_ItemKind = Lakehouse
+
+		annotation ONT_ItemName = SalesLakehouse
+
+		annotation ONT_WorkspaceName = WORKSPACE_NAME_PLACEHOLDER
+
+		annotation ONT_SqlEndpoint = pfivgtygvc4e7pugjctkzogonu-i3qnyx47hhdebanfqkpth3s6aa.datawarehouse.fabric.microsoft.com
+
+		annotation ONT_SqlDatabase = SalesLakehouse
+
+		annotation ONT_PinnedAtUtc = 2026-09-30T05:26:34.286Z
+
